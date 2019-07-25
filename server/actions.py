@@ -8,6 +8,7 @@ def get_server_actions():
         INSTALLED_APPS,
         [],
     )
+    assert len(modules) >= 1
     actions = reduce(
         lambda value, item: value + [getattr(item, 'actions', [])],
         modules,
