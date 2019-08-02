@@ -1,6 +1,7 @@
 from functools import reduce
 from settings import INSTALLED_APPS
-
+import logging
+log = logging.getLogger('server')
 
 def get_server_actions():
     modules = reduce(
